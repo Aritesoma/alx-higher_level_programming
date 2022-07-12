@@ -116,7 +116,8 @@ class Base:
                 writer = csv.writer(cfile)
                 for obj in list_objs:
                     if cls.__name__ == "Rectangle":
-                        writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                        writer.writerow([obj.id, obj.width, obj.height,
+                                         obj.x, obj.y])
                     if cls.__name__ == "Square":
                         writer.writerow([obj.id, obj.width, obj.x, obj.y])
 
@@ -132,7 +133,8 @@ class Base:
                 reader = csv.DictReader(cfile, fieldnames={'id','width',
                                                            'height', 'x', 'y'})
             elif cls.__name__ == "Square":
-                reader = csv.DictReader(cfile, fieldnames={'id', 'size', 'x', 'y'})
+                reader = csv.DictReader(cfile, fieldnames={'id', 'size', 'x',
+                                                           'y'})
 
             instances = []
             for instance in reader:
