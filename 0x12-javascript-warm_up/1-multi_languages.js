@@ -5,8 +5,3 @@ const javas = 'JavaScript is amazing';
 console.log(fun);
 console.log(thon);
 console.log(javas);
-
-
-
-
-
